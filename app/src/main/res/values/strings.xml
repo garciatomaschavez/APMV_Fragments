@@ -2,4 +2,7 @@
     <string name="app_name">APMV_Fragments</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hola_soy_el_fragment_agua">¡HOLA! SOY EL FRAGMENT AGUA</string>
+    <string name="volver">VOLVER</string>
+    <string name="vengo_del_elemento_n">VENGO DEL ELEMENTO: \n</string>
 </resources>
