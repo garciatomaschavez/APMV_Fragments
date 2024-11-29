@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.garciatomaschavez.apmv_fragments"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.garciatomaschavez.apmv_fragments"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
