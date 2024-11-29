@@ -5,4 +5,6 @@
     <color name="blueAir">#A7E7FE</color>
     <color name="blueAir2">#3399af</color>
     <color name="red">#FFFF0000</color>
+    <color name="aguaClaro">#8AD2E8</color>
+    <color name="aguaOscuro">#23559E</color>
 </resources>
