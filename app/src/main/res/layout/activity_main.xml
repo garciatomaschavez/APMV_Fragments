@@ -8,12 +8,57 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Fragments\nTom, Min, Jandro y Raúl"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintTop_toTopOf="@id/main"
+    />
+
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintTop_toBottomOf="@id/title"
+    >
+        <Button
+            android:id="@+id/openFuego"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuego"
+        />
+
+        <Button
+            android:id="@+id/openAgua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agua"
+        />
+        <Button
+            android:id="@+id/openAire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aire"
+            />
+        <Button
+            android:id="@+id/openTierra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tierra"
+            />
+
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
