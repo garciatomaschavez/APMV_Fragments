@@ -3,6 +3,7 @@ package com.garciatomaschavez.apmv_fragments;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -10,7 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,4 +63,19 @@ public class FragmentTierra extends Fragment {
         return inflater.inflate(R.layout.fragment_tierra, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ImageView logo = requireActivity().findViewById(R.id.imageView);
+
+
+        Glide.with(this)
+//                .load("https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80")
+                .load(R.drawable.tierrita)
+//                .transition(DrawableTransitionOptions.withCrossFade(2000))
+//                .circleCrop()
+//                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.white)))
+                .into(logo);
+    }
 }
