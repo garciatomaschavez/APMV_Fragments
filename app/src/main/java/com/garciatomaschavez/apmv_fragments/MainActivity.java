@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FragmentFuego fragment = new FragmentFuego();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameLayout, fragment);
+                transaction.add(R.id.frameLayout, fragment);
                 transaction.commit();
             }
         });
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FragmentAgua fragment = new FragmentAgua();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameLayout, fragment);
+                transaction.add(R.id.frameLayout, fragment);
                 transaction.commit();
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FragmentAire fragment = new FragmentAire();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameLayout, fragment);
+                transaction.add(R.id.frameLayout, fragment);
                 transaction.commit();
             }
         });
