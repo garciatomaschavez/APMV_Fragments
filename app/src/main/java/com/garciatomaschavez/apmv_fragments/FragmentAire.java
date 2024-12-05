@@ -30,6 +30,7 @@ public class FragmentAire extends Fragment {
     private String mParam2;
 
     Buffer buffer;
+    TextView mensaje;
 
     public FragmentAire() {
         // Required empty public constructor
@@ -74,9 +75,12 @@ public class FragmentAire extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         buffer = new ViewModelProvider(requireActivity()).get(Buffer.class);
+        mensaje = requireActivity().findViewById(R.id.mensaje);
 
         TextView anteriorElemento = requireActivity().findViewById(R.id.anteriorElemento);
         anteriorElemento.setText(anteriorElemento.getText().toString()+buffer.getAnteriorElemento());
+
+        mensaje.setText(buffer.getMensaje());
 
         buffer.setAnteriorElemento("AIRE");
 

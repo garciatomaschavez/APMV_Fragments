@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Objects;
@@ -30,6 +31,7 @@ public class FragmentAgua extends Fragment {
     private String mParam2;
 
     Buffer buffer;
+    EditText inputMensaje;
 
     public FragmentAgua() {
         // Required empty public constructor
@@ -74,6 +76,7 @@ public class FragmentAgua extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         buffer = new ViewModelProvider(requireActivity()).get(Buffer.class);
+        inputMensaje = requireActivity().findViewById(R.id.inputMensaje);
 
         TextView anteriorElemento = view.findViewById(R.id.anteriorElemento);
         anteriorElemento.setText(anteriorElemento.getText().toString()+buffer.getAnteriorElemento());
@@ -83,6 +86,7 @@ public class FragmentAgua extends Fragment {
         // for closing fragment and returning to main menu
         Button returnButton = view.findViewById(R.id.returnButton);
         returnButton.setOnClickListener(view1 -> {
+            buffer.setMensaje(inputMensaje.getText().toString());
             requireActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
         });
     }

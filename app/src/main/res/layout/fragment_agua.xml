@@ -44,6 +44,16 @@
             android:textColor="@color/aguaOscuro"
             android:textStyle="bold"
             />
+
+        <EditText
+            android:id="@+id/inputMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/este_mensaje_aparecer_en_aire"
+
+            android:background="@color/white"
+            android:textColor="@color/black"
+            />
     </LinearLayout>
 
     <Button
