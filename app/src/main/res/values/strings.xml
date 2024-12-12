@@ -7,4 +7,5 @@
     <string name="vengo_del_elemento_n">VENGO DEL ELEMENTO: \n</string>
     <string name="este_mensaje_aparecer_en_aire">Este mensaje aparecerá en Aire</string>
     <string name="sin_mensaje">Sin mensaje</string>
+    <string name="hello_tierra_fragment">hello_tierra_fragment</string>
 </resources>
