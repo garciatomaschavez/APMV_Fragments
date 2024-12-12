@@ -2,11 +2,16 @@ package com.garciatomaschavez.apmv_fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,9 @@ public class FragmentAire extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Buffer buffer;
+    TextView mensaje;
 
     public FragmentAire() {
         // Required empty public constructor
@@ -60,5 +68,26 @@ public class FragmentAire extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_aire, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        buffer = new ViewModelProvider(requireActivity()).get(Buffer.class);
+        mensaje = requireActivity().findViewById(R.id.mensaje);
+
+        TextView anteriorElemento = requireActivity().findViewById(R.id.anteriorElemento);
+        anteriorElemento.setText(anteriorElemento.getText().toString()+buffer.getAnteriorElemento());
+
+        mensaje.setText(buffer.getMensaje());
+
+        buffer.setAnteriorElemento("AIRE");
+
+        // for closing fragment and returning to main menu
+        Button returnButton = view.findViewById(R.id.volver);
+        returnButton.setOnClickListener(view1 -> {
+            requireActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+        });
     }
 }

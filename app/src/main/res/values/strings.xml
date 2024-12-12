@@ -5,4 +5,5 @@
     <string name="hola_soy_el_fragment_agua">¡HOLA! SOY EL FRAGMENT AGUA</string>
     <string name="volver">VOLVER</string>
     <string name="vengo_del_elemento_n">VENGO DEL ELEMENTO: \n</string>
+    <string name="este_mensaje_aparecer_en_aire">Este mensaje aparecerá en Aire</string>
 </resources>
