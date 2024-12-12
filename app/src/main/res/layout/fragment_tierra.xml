@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/brown"
+    android:background="@color/earthMain"
     tools:context=".FragmentTierra">
 
     <LinearLayout
@@ -27,20 +27,55 @@
             android:layout_height="388dp"
             />
 
+
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/anteriorElemento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/vengo_del_elemento_n"
+            android:textSize="30sp"
+            android:textColor="@color/earthHighlight"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/inputMensaje"
             android:layout_width="match_parent"
-            android:layout_height="225dp"
-            android:text="VENGO DEL ELEMENTO"
+            android:layout_height="50dp"
+            android:hint="@string/este_mensaje_aparecer_en_aire"
+
+            android:background="@color/earthHighlight"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            />
+
+        <TextView
+            android:id="@+id/mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/sin_mensaje"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="@color/earthHighlight"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+
 
         <Button
-            android:id="@+id/volver"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:text="VOLVER"
-            android:backgroundTint="@color/marron_oscuro"
+            android:id="@+id/returnButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/volver"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+
+            android:backgroundTint="@color/earthHighlight"
             />
 
     </LinearLayout>

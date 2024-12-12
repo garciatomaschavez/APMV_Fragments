@@ -55,16 +55,16 @@ public class MainActivity extends AppCompatActivity {
                 transaction.commit();
             }
         });
-//
-//        openTierra.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FragmentTierra fragment = new FragmentTierra();
-//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//                transaction.replace(R.id.frameLayout, fragment);
-//                transaction.commit();
-//            }
-//        });
+
+        openTierra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTierra fragment = new FragmentTierra();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.frameLayout, fragment);
+                transaction.commit();
+            }
+        });
 
         openAire.setOnClickListener(new View.OnClickListener() {
             @Override

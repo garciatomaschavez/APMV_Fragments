@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentAgua"
-    android:background="@color/aguaClaro"
+    android:background="@color/waterMain"
     >
 
     <LinearLayout
@@ -24,7 +24,7 @@
             android:text="@string/hola_soy_el_fragment_agua"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:textColor="@color/aguaOscuro"
+            android:textColor="@color/waterHighlight"
             />
 
         <ImageView
@@ -42,7 +42,7 @@
 
             android:text="@string/vengo_del_elemento_n"
             android:textSize="30sp"
-            android:textColor="@color/aguaOscuro"
+            android:textColor="@color/waterHighlight"
             android:textStyle="bold"
             />
 
@@ -53,9 +53,9 @@
             android:layout_height="50dp"
             android:hint="@string/este_mensaje_aparecer_en_aire"
 
-            android:background="@color/aguaOscuro"
+            android:background="@color/waterHighlight"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/grey"
             />
         <TextView
             android:id="@+id/mensaje"
@@ -65,7 +65,7 @@
             android:layout_marginTop="20dp"
             android:text="@string/sin_mensaje"
             android:textSize="20sp"
-            android:textColor="@color/aguaOscuro"
+            android:textColor="@color/waterHighlight"
             android:textStyle="bold"
             android:textAlignment="center"
             />
@@ -82,7 +82,7 @@
         android:textSize="40sp"
         android:textColor="@color/white"
         app:cornerRadius="0dp"
-        android:backgroundTint="@color/aguaOscuro"
+        android:backgroundTint="@color/waterHighlight"
         />
 
 </FrameLayout>

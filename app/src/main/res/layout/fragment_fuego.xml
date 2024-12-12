@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
+    android:background="@color/fireMain"
     tools:context=".FragmentFuego">
 
     <!-- TODO: Update blank fragment layout -->
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:text="This is the Fire element!\nWoah so crazy"
             android:textAlignment="center"
-            android:textColor="@color/red2"
+            android:textColor="@color/fireHighlight"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
@@ -43,7 +43,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/vengo_del_elemento_n"
             android:textSize="30sp"
-            android:textColor="@color/red2"
+            android:textColor="@color/fireHighlight"
             android:textStyle="bold"
         />
 
@@ -53,9 +53,9 @@
             android:layout_height="50dp"
             android:hint="@string/este_mensaje_aparecer_en_aire"
 
-            android:background="@color/red2"
+            android:background="@color/fireHighlight"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/grey"
             />
 
 
@@ -67,7 +67,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/sin_mensaje"
             android:textSize="20sp"
-            android:textColor="@color/red2"
+            android:textColor="@color/fireHighlight"
             android:textStyle="bold"
             android:textAlignment="center"
             />
@@ -83,7 +83,7 @@
             android:textSize="40sp"
             android:textColor="@color/white"
 
-            android:backgroundTint="@color/red2"
+            android:backgroundTint="@color/fireHighlight"
             />
     </LinearLayout>
 

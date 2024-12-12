@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +32,11 @@ public class FragmentTierra extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Buffer buffer;
+    EditText inputMensaje;
+    TextView mensaje;
+    ImageView logo;
 
     public FragmentTierra() {
         // Required empty public constructor
@@ -67,7 +73,24 @@ public class FragmentTierra extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ImageView logo = requireActivity().findViewById(R.id.imageView);
+        buffer = new ViewModelProvider(requireActivity()).get(Buffer.class);
+        mensaje = requireActivity().findViewById(R.id.mensaje);
+        inputMensaje = requireActivity().findViewById(R.id.inputMensaje);
+        logo = requireActivity().findViewById(R.id.imageView);
+
+        TextView anteriorElemento = view.findViewById(R.id.anteriorElemento);
+        anteriorElemento.setText(anteriorElemento.getText().toString()+buffer.getAnteriorElemento());
+
+        mensaje.setText(buffer.getMensaje());
+
+        buffer.setAnteriorElemento("TIERRA");
+
+        // for closing fragment and returning to main menu
+        Button returnButton = view.findViewById(R.id.returnButton);
+        returnButton.setOnClickListener(view1 -> {
+            buffer.setMensaje(inputMensaje.getText().toString());
+            requireActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+        });
 
 
         Glide.with(this)
