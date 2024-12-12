@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.nio.Buffer;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link FragmentTierra#newInstance} factory method to
@@ -31,6 +33,8 @@ public class FragmentTierra extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Buffer buffer;
 
     public FragmentTierra() {
         // Required empty public constructor
@@ -77,5 +81,8 @@ public class FragmentTierra extends Fragment {
 //                .circleCrop()
 //                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.white)))
                 .into(logo);
+
+
+
     }
 }
