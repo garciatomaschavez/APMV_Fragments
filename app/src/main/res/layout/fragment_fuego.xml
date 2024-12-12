@@ -21,31 +21,55 @@
             android:layout_height="wrap_content"
             android:text="This is the Fire element!\nWoah so crazy"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textColor="@color/red2"
+            android:textSize="30sp"
+            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             />
 
         <ImageView
             android:id="@+id/fireImg"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-
+            android:layout_height="350dp"
             android:src="@drawable/fire"
-            android:layout_marginTop="40dp"
-
-            />
+            android:layout_marginTop="10dp"
+        />
 
         <TextView
             android:id="@+id/anteriorElemento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:text="@string/vengo_del_elemento_n"
             android:textSize="30sp"
             android:textColor="@color/red2"
             android:textStyle="bold"
+        />
+
+        <EditText
+            android:id="@+id/inputMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/este_mensaje_aparecer_en_aire"
+
+            android:background="@color/red2"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/sin_mensaje"
+            android:textSize="20sp"
+            android:textColor="@color/red2"
+            android:textStyle="bold"
+            android:textAlignment="center"
             />
 
 
@@ -53,12 +77,12 @@
             android:id="@+id/returnButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
             android:text="@string/volver"
             android:textSize="40sp"
             android:textColor="@color/white"
-            android:cornerRadius="0dp"
+
             android:backgroundTint="@color/red2"
             />
     </LinearLayout>

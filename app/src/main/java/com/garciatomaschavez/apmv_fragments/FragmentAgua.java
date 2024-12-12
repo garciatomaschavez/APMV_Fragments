@@ -32,6 +32,7 @@ public class FragmentAgua extends Fragment {
 
     Buffer buffer;
     EditText inputMensaje;
+    TextView mensaje;
 
     public FragmentAgua() {
         // Required empty public constructor
@@ -76,10 +77,13 @@ public class FragmentAgua extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         buffer = new ViewModelProvider(requireActivity()).get(Buffer.class);
+        mensaje = requireActivity().findViewById(R.id.mensaje);
         inputMensaje = requireActivity().findViewById(R.id.inputMensaje);
 
         TextView anteriorElemento = view.findViewById(R.id.anteriorElemento);
         anteriorElemento.setText(anteriorElemento.getText().toString()+buffer.getAnteriorElemento());
+
+        mensaje.setText(buffer.getMensaje());
 
         buffer.setAnteriorElemento("AGUA");
 

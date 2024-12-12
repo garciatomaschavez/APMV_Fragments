@@ -16,11 +16,13 @@
         tools:context=".MainActivity">
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fragment AIRE"
             android:textStyle="bold"
             android:textSize="34dp"
+            android:textColor="@color/blueAir2"
             app:layout_constraintBottom_toTopOf="@+id/ImageAire"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,9 +33,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/aire"
+            app:layout_constraintBottom_toTopOf="@id/anteriorElemento"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="101dp" />
+            app:layout_constraintTop_toBottomOf="@+id/ImageAire"
+            tools:layout_editor_absoluteY="101dp"
+            />
 
         <TextView
             android:id="@+id/anteriorElemento"
@@ -42,22 +47,42 @@
             android:text="VENGO DEL ELEMENTO: "
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/volver"
+            android:textColor="@color/blueAir2"
+            app:layout_constraintBottom_toTopOf="@+id/inputMensaje"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ImageAire" />
+
+        <EditText
+            android:id="@+id/inputMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/este_mensaje_aparecer_en_aire"
+
+            android:background="@color/blueAir2"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+
+
+            app:layout_constraintBottom_toTopOf="@+id/mensaje"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anteriorElemento"
+            />
 
         <TextView
             android:id="@+id/mensaje"
             android:layout_width="match_parent"
             android:layout_height="50dp"
 
-            app:layout_constraintTop_toBottomOf="@id/anteriorElemento"
+            app:layout_constraintTop_toBottomOf="@id/inputMensaje"
             app:layout_constraintBottom_toTopOf="@id/volver"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-
-            android:textColor="@color/black"
+            android:text="@string/sin_mensaje"
+            android:textColor="@color/blueAir2"
+            android:textStyle="bold"
+            android:textAlignment="center"
             />
 
         <Button

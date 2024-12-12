@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -30,6 +31,7 @@ public class FragmentAire extends Fragment {
     private String mParam2;
 
     Buffer buffer;
+    EditText inputMensaje;
     TextView mensaje;
 
     public FragmentAire() {
@@ -76,6 +78,7 @@ public class FragmentAire extends Fragment {
 
         buffer = new ViewModelProvider(requireActivity()).get(Buffer.class);
         mensaje = requireActivity().findViewById(R.id.mensaje);
+        inputMensaje = requireActivity().findViewById(R.id.inputMensaje);
 
         TextView anteriorElemento = requireActivity().findViewById(R.id.anteriorElemento);
         anteriorElemento.setText(anteriorElemento.getText().toString()+buffer.getAnteriorElemento());
@@ -87,6 +90,7 @@ public class FragmentAire extends Fragment {
         // for closing fragment and returning to main menu
         Button returnButton = view.findViewById(R.id.volver);
         returnButton.setOnClickListener(view1 -> {
+            buffer.setMensaje(inputMensaje.getText().toString());
             requireActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
         });
     }

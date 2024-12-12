@@ -24,12 +24,13 @@
             android:text="@string/hola_soy_el_fragment_agua"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/aguaOscuro"
             />
 
         <ImageView
+            android:id="@+id/imageAgua"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="400dp"
             android:src="@drawable/water"
             />
 
@@ -45,15 +46,30 @@
             android:textStyle="bold"
             />
 
+
         <EditText
             android:id="@+id/inputMensaje"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/este_mensaje_aparecer_en_aire"
 
-            android:background="@color/white"
-            android:textColor="@color/black"
+            android:background="@color/aguaOscuro"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             />
+        <TextView
+            android:id="@+id/mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/sin_mensaje"
+            android:textSize="20sp"
+            android:textColor="@color/aguaOscuro"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+
     </LinearLayout>
 
     <Button
